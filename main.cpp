@@ -1,3 +1,10 @@
+/*
+TODO:
+    1. Drop first number of entered credit card number and save it as a check digit to use in TODO 4
+    2. Find all individual numbers that are 2 digits, split those digits, add them together, and put it back in the same spot the two digit number was
+    3. Add all of the resulting digits together
+    4. For it to be true once you add up all the digits (s) (10 - (s % 10)) mod 10 should equal check digit
+*/
 #include <iostream>
 
 // Just take away error and make u_long a thing
