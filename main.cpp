@@ -1,8 +1,7 @@
 /*
 TODO:
-    1. Find all individual numbers that are 2 digits, split those digits, add them together, and put it back in the same spot the two digit number was
-    2. Add all of the resulting digits together
-    3. For it to be true once you add up all the digits (s) (10 - (s % 10)) mod 10 should equal check digit
+    1. Add all of the resulting digits together
+    2. For it to be true once you add up all the digits (s) (10 - (s % 10)) mod 10 should equal check digit
 */
 #include <iostream>
 #include <array>
@@ -22,6 +21,7 @@ bool luhns(std::string ccNum) {
     // get length of array
     int len = sizeof(ccArr) / sizeof(ccArr[0]);
     int checkDigit = ccNum.back() - '0';
+    int finally = 0;
     //char multipliedArr[len];
     // iterate through the string and put each char in the array. has to be u_long or throws an error
     for (u_long i = 0; i < ccNum.length(); i++) {
@@ -55,6 +55,9 @@ bool luhns(std::string ccNum) {
             added = first + second;
             ccArr[i] = added;
         }
+    }
+    for (int i : ccArr) {
+        finally += i;
     }
     return true;
 }
