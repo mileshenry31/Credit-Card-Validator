@@ -1,7 +1,3 @@
-/*
-TODO:
-    1. For it to be true once you add up all the digits (s) (10 - (s % 10)) mod 10 should equal check digit
-*/
 #include <iostream>
 #include <array>
 #include <string>
@@ -10,7 +6,10 @@ TODO:
 typedef unsigned long u_long;
 bool luhns(std::string ccNum);
 int main() {
-    luhns("123456");
+    std::string number;
+    std::cout << "What is your credit card number? ";
+    std::cin >> number;
+    luhns(number);
     return 0;
 }
 
@@ -57,6 +56,11 @@ bool luhns(std::string ccNum) {
     }
     for (int i : ccArr) {
         finally += i;
+    }
+    if ((10 - (finally % 10)) % 10 == checkDigit) {
+        std::cout << "Valid" << "\n";
+    } else {
+        std::cout << "Not valid." << "\n";
     }
     return true;
 }
