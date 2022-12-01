@@ -6,12 +6,13 @@ TODO:
 */
 #include <iostream>
 #include <array>
+#include <string>
 
 // Just take away error and make u_long a thing
 typedef unsigned long u_long;
 bool luhns(std::string ccNum);
 int main() {
-    luhns("01839187319137");
+    luhns("123456");
     return 0;
 }
 
@@ -41,6 +42,19 @@ bool luhns(std::string ccNum) {
         ccArr[i] = ccArr[i] * 2;
         //std::cout << ccArr[i] << "\n";
     }
-    
+    // goes through each number and splits the double digit ones in half and then adds those two numbers together
+    for (int i = 0; i < len; i++) {
+        std::string temp;
+        int first;
+        int second;
+        if (ccArr[i] >= 10) {
+            int added;
+            temp = std::to_string(ccArr[i]);
+            first = temp[0] - '0';
+            second = temp[1] - '0';
+            added = first + second;
+            ccArr[i] = added;
+        }
+    }
     return true;
 }
