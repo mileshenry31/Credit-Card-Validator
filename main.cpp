@@ -41,8 +41,6 @@ bool luhns(std::string ccNum) {
         ccArr[i] = ccArr[i] * 2;
         //std::cout << ccArr[i] << "\n";
     }
-    for (u_long i = 0; i < len; i++) {
-        std::cout << ccArr[i] << ' ';
-    }
+    
     return true;
 }
