@@ -20,7 +20,6 @@ bool luhns(std::string ccNum) {
     int len = sizeof(ccArr) / sizeof(ccArr[0]);
     int checkDigit = ccNum.back() - '0';
     int finally = 0;
-    //char multipliedArr[len];
     // iterate through the string and put each char in the array. has to be u_long or throws an error
     for (u_long i = 0; i < ccNum.length(); i++) {
        if (i == len) {
@@ -29,16 +28,11 @@ bool luhns(std::string ccNum) {
         ccArr[i] = ccNum[i];
         ccArr[i] = ccArr[i];
         ccArr[i] = ccArr[i] - '0';
-        //std::cout << ccArr[i] << '\n';
 
     }
     // go from right to left of array
     for (int i = len - 1; i >= 0; i -= 2) {
-        /*if (i == len - 1) {
-            continue;
-        }*/
         ccArr[i] = ccArr[i] * 2;
-        //std::cout << ccArr[i] << "\n";
     }
     // goes through each number and splits the double digit ones in half and then adds those two numbers together
     for (int i = 0; i < len; i++) {
