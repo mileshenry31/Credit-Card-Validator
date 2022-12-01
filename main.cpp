@@ -1,7 +1,6 @@
 /*
 TODO:
-    1. Add all of the resulting digits together
-    2. For it to be true once you add up all the digits (s) (10 - (s % 10)) mod 10 should equal check digit
+    1. For it to be true once you add up all the digits (s) (10 - (s % 10)) mod 10 should equal check digit
 */
 #include <iostream>
 #include <array>
