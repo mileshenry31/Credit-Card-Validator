@@ -6,6 +6,7 @@
 typedef unsigned long u_long;
 bool luhns(std::string ccNum);
 int main() {
+    // random comment
     std::string number;
     std::cout << "What is your credit card number? ";
     std::cin >> number;
