@@ -22,7 +22,11 @@ bool luhns(std::string ccNum) {
     int finally = 0;
     // iterate through the string and put each char in the array. has to be u_long or throws an error
     for (u_long i = 0; i < ccNum.length(); i++) {
-       if (i == len) {
+        if (ccNum[i] < 48 || ccNum[i] > 57) {
+            std::cout << "Please enter only numbers.\n";
+            return false;
+        }
+        if (i == len) {
             continue;
         }
         ccArr[i] = ccNum[i];
